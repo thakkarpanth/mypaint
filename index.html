@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Paint App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="toolbox left">
+      <div class="group commands">
+        <div class="item" data-command="undo" title="undo">
+          <img src="images/undo.jpg" />
+        </div>
+        <div class="item" data-command="download" title="download">
+          <img src="images/download.png" />
+        </div>
+      </div>
+      <div class="group shapes">
+        <div class="item active" data-tool="line" title="Line Tool">
+          <img src="images/line.png" />
+        </div>
+        <div class="item" data-tool="rectangle" title="rectangle">
+          <img src="images/rectangle.jpg" />
+        </div>
+        <div class="item" data-tool="circle" title="circle">
+          <img src="images/circle.png" />
+        </div>
+
+        <div class="item" data-tool="triangle" title="triangle">
+          <img src="images/triangle.jpg" />
+        </div>
+      </div>
+      <div class="group tools">
+        <div class="item" data-tool="pencil" title="pencil">
+          <img src="images/pencil.png" />
+        </div>
+        <div class="item" data-tool="brush" title="brush">
+          <img src="images/brush.jpg" />
+        </div>
+        <div class="item" data-tool="paint-bucket" title="paint-bucket">
+          <img src="images/bucket.png" />
+        </div>
+        <div class="item" data-tool="eraser" title="eraser">
+          <img src="images/eraser.png" />
+        </div>
+      </div>
+      <div class="group linewidths for-shapes" style="display: block;">
+        <div class="item active" data-line-width="1" title="1 pixel">
+          <div
+            class="linewidth"
+            style="background-color: white; width: 1px; height: 1px;"
+          ></div>
+        </div>
+
+        <div class="item" data-line-width="2" title="2 pixel">
+          <div
+            class="linewidth"
+            style="background-color: white; width: 2px; height: 2px;"
+          ></div>
+        </div>
+
+        <div class="item" data-line-width="3" title="3 pixel">
+          <div
+            class="linewidth"
+            style="background-color: white; width: 3px; height: 3px;"
+          ></div>
+        </div>
+
+        <div class="item" data-line-width="4" title="4 pixel">
+          <div
+            class="linewidth"
+            style="background-color: white; width: 4px; height: 4px;"
+          ></div>
+        </div>
+
+        <div class="item" data-line-width="5" title="5 pixel">
+          <div
+            class="linewidth"
+            style="background-color: white; width: 5px; height: 5px;"
+          ></div>
+        </div>
+      </div>
+
+      <div class="group linewidths for-brush" style="display: none;">
+        <div class="item active" data-brush-width="4" title="4 pixel">
+          <div
+            class="linewidth"
+            style="background-color: white; width: 4px; height: 4px;"
+          ></div>
+        </div>
+
+        <div class="item" data-brush-width="6" title="6 pixel">
+          <div
+            class="linewidth"
+            style="background-color: white; width: 6px; height: 6px;"
+          ></div>
+        </div>
+
+        <div class="item" data-brush-width="8" title="8 pixel">
+          <div
+            class="linewidth"
+            style="background-color: white; width: 8px; height: 8px;"
+          ></div>
+        </div>
+
+        <div class="item" data-brush-width="10" title="10 pixel">
+          <div
+            class="linewidth"
+            style="background-color: white; width: 10px; height: 10px;"
+          ></div>
+        </div>
+
+        <div class="item" data-brush-width="12" title="12 pixel">
+          <div
+            class="linewidth"
+            style="background-color: white; width: 12px; height: 12px;"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <div class="toolbox right">
+      <div class="group swatches">
+        <div class="item" data-color="#ffffff">
+          <div class="swatch" style="background-color: #ffffff;"></div>
+        </div>
+        <div class="item active" data-color="#000000">
+          <div class="swatch" style="background-color: #000000;"></div>
+        </div>
+        <div class="item" data-color="#ff0000">
+          <div class="swatch" style="background-color: #ff0000;"></div>
+        </div>
+        <div class="item" data-color="#00ff00">
+          <div class="swatch" style="background-color: #00ff00;"></div>
+        </div>
+        <div class="item" data-color="#0000ff">
+          <div class="swatch" style="background-color: #0000ff;"></div>
+        </div>
+        <div class="item" data-color="#00ffff">
+          <div class="swatch" style="background-color: #00ffff;"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

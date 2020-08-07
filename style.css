@@ -1,0 +1,68 @@
+body {
+  margin: 0px;
+  background-color: #283333;
+}
+
+.toolbox {
+  height: 100vh;
+  position: absolute;
+
+  background-color: #3a4b4b;
+}
+
+.toolbox.left {
+  left: 0px;
+  top: 0px;
+}
+
+.toolbox.right {
+  top: 0px;
+  right: 0px;
+}
+
+.toolbox .group .item {
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.toolbox .group {
+  border-bottom: thin solid gray;
+}
+
+.toolbox .group .item:hover,
+.active {
+  background-color: #4b6161;
+}
+
+.toolbox .group .item img {
+  width: 100%;
+}
+
+#canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.toolbox .group.linewidths .item {
+  position: relative;
+}
+
+.toolbox .group.linewidths .item .linewidth {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.toolbox .group.swatches .item .swatch {
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
